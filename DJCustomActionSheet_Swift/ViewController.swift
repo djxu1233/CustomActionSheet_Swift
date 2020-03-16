@@ -24,6 +24,8 @@ class ViewController: UIViewController {
         btn.setTitleColor(.white, for: .normal)
         btn.addTarget(self, action: #selector(btnAction(_:)), for: .touchUpInside)
         self.view.addSubview(btn)
+        
+        btn.center.x = self.view.center.x
     }
     
     @objc func btnAction(_ btn: UIButton) -> Void {
@@ -46,7 +48,7 @@ class ViewController: UIViewController {
             
 //            model.textFont = UIFont.systemFont(ofSize: 20)
 //            model.textColor = .red
-            model.textAlign = .center
+//            model.textAlign = .center
             
             dataSource.add(model)
         }

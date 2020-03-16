@@ -76,12 +76,12 @@ class DJActionSheetCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        if self.model?.type == DJActionSheetType.typeCheck {
+        if self.model?.type == .typeCheck {
             checkImgV.center.y = self.contentView.center.y
             checkImgV.isHidden = self.model?.isSelected == true ? false : true
         }
                 
-        let labelMarginToRight: CGFloat = self.model?.type == DJActionSheetType.typeCheck ? (10 + 28 + 10) : 10
+        let labelMarginToRight: CGFloat = self.model?.type == .typeCheck ? (10 + 28 + 10) : 10
 
         textLab.frame = CGRect.init(x: 10, y: 0, width: kScreenWidth - 10 - labelMarginToRight, height: cellHeight)
         
